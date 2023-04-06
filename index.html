@@ -1,1 +1,89 @@
-<a>aaa</a>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>formatter</title>
+    
+    
+    <link rel="stylesheet" href="/formatter/lib/codemirror.css">
+    
+    <link rel="stylesheet" href="/formatter/lib/darcula.css">
+
+    
+    <script src="/formatter/lib/codemirror-c353e88535.js"></script>
+     
+    <script src="/formatter/lib/javascript-1986caab0b.js"></script>
+
+     
+    <script src="/formatter/formatterConfig-713143268f.js"></script>
+     
+    <script src="/formatter/util-6e3ac81278.js"></script>
+
+
+    <style>
+
+        .CodeMirror {
+            font-size: 16px;
+            display: inline-block;
+        }
+        .CodeMirror-wrap pre {
+            word-break: break-word;
+        }
+        header {
+            padding: 44px 0 29px;
+            font-size: 32px;
+            text-align: center;
+            line-height: 37px;
+            height: 37px;
+            color: #161D34;
+        }
+        .formatter-button {
+            margin-top: 10px;
+        }
+        .checkbox {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .wapper {
+            width: 1280px;
+            margin: 0 auto;
+        }
+        .formatter-button {
+            width: 100px;
+        }
+        .textarea-left {
+            margin-right: 10px;
+        }
+        .check-title {
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>格式化与混淆</header>
+    <div class="wapper">
+
+        <div class="checkboxs">
+            <div class="formatter">
+                <p class="check-title">格式化代码：</p>
+            </div>
+            <div class="yun">
+                <p class="check-title">混淆代码：</p>
+            </div>
+        </div>
+
+        <div class="editor-area">
+        <textarea id="id-textarea-left" class="textarea-left"></textarea>
+        <textarea id="id-textarea-right"></textarea>    
+        </div>    
+    </div>
+    <script src="/formatter/espree-8433fab4bb.min.js"></script>
+    <script src="/formatter/formatter-0728b94e37.js"></script>
+
+
+    
+    <script src="/formatter/index-3f03ac7f95.js"></script>
+
+</body>
+</html>
