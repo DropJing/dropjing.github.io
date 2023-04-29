@@ -1,89 +1,154 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>formatter</title>
-    
-    
-    <link rel="stylesheet" href="./lib/codemirror.css">
-    
-    <link rel="stylesheet" href="./lib/darcula.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>汇总</title>
+    <script>
 
-    
-    <script src="./lib/codemirror-c353e88535.js"></script>
-     
-    <script src="./lib/javascript-1986caab0b.js"></script>
-
-     
-    <script src="./formatterConfig-713143268f.js"></script>
-     
-    <script src="./util-6e3ac81278.js"></script>
+    </script>
 
 
     <style>
 
-        .CodeMirror {
-            font-size: 16px;
-            display: inline-block;
+        body {
+            margin: 0;
+            padding: 0;
         }
-        .CodeMirror-wrap pre {
-            word-break: break-word;
-        }
+
         header {
             padding: 44px 0 29px;
             font-size: 32px;
             text-align: center;
             line-height: 37px;
             height: 37px;
-            color: #161D34;
+            color: #FFFFFF;
+            background-color: #161D34;
         }
-        .formatter-button {
-            margin-top: 10px;
+
+        a {
+            text-decoration: none;
+            color: black;
         }
-        .checkbox {
-            display: inline-block;
-            margin-right: 20px;
+
+        h1 {
+            font-size: 28px;
+            margin-top: 40px;
+            padding-left: 20px;
+            color: #FFFFFF;
+            line-height: 36px;
         }
-        .wapper {
+
+        .container {
             width: 1280px;
-            margin: 0 auto;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: flex;
+            color: #333333;
+            font-weight: 600;
+            flex-wrap: wrap;
         }
-        .formatter-button {
-            width: 100px;
+
+        .item {
+            width: 255px;
+            height: 100px;
+            padding: 26px 20px 22px 22px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 32px 0 rgb(7 18 59 / 4%);
+            border-radius: 4px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .textarea-left {
-            margin-right: 10px;
+
+        .item:hover {
+            cursor: pointer;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 32px 0 rgba(7,18,59,0.10);
+            border-radius: 4px;
+            color: #1677FF;
         }
-        .check-title {
-            font-size: 22px;
-        }
+
     </style>
 </head>
-
 <body>
-    <header>格式化与混淆</header>
-    <div class="wapper">
 
-        <div class="checkboxs">
-            <div class="formatter">
-                <p class="check-title">格式化代码：</p>
-            </div>
-            <div class="yun">
-                <p class="check-title">混淆代码：</p>
-            </div>
-        </div>
-
-        <div class="editor-area">
-        <textarea id="id-textarea-left" class="textarea-left"></textarea>
-        <textarea id="id-textarea-right"></textarea>    
-        </div>    
-    </div>
-    <script src="./espree-8433fab4bb.min.js"></script>
-    <script src="./formatter-0728b94e37.js"></script>
+<header>卓卓汇总</header>
 
 
-    
-    <script src="./index-3f03ac7f95.js"></script>
+
+<div class="container">
+</div>
+
 
 </body>
-</html>
+
+<script>
+
+    const appendHtml = (element, html) => {
+        element.insertAdjacentHTML('beforeend', html)
+    }
+
+    const e = selector => document.querySelector(selector)
+
+    const renderItems = () => {
+
+        let items = [
+     
+            {
+                name: 'formatter',
+                link: './formatter/index.html',
+            },
+            {
+              name: 'paint',
+              link: './paint/main.html',
+            },
+    
+         
+            // {
+            //   name: 'scss2css',
+            //   link: './scssTocss/index.html',
+            // },
+      
+            {
+              name: 'vconsole',
+              link: './vconsole/index.html',
+            },
+            {
+                name: '像素扫雷',
+                link: './mine_clearance/a.html',
+            },
+            {
+              name: '汇编编译器',
+              link: './asm-ide/index.html',
+            },
+            // {
+            //   name: 'zuma',
+            //   link: './zuma/index.html',
+            // },
+            {
+              name: 'easing',
+              link: './easing/easing-curve.html',
+            },
+        ]
+
+        let html = ''
+
+        for (let item of items) {
+            let {name, link} = item
+            html += `<a href="${link}" class="item" target="_blank">${name}</a>`
+        }
+
+        appendHtml(e('.container'), html);
+    }
+
+    const __main = () => {
+        renderItems()
+    }
+
+    __main()
+
+
+</script>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>sklz</title>
+        <style media="screen">
+            canvas {
+                border: 1px solid #ccc;
+                cursor: pointer;
+            }
+            .number {
+                display: inline-block;
+                width: 40px;
+            }
+            .select {
+                display: inline-block;
+            }
+            body {
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+            }
+            .debug {
+                border: 1px solid red;
+            }
+            .option {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                background-color: darkgrey;
+            }
+            .again {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 20px;
+                background-color: darkgrey;
+            }
+            .title {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .again-button {
+                width: 100px;
+                height: 30px;
+                border: 1px solid darkgrey;
+                border-radius: 20px;
+                background-color:dimgray;
+            }
+            .again-button:hover {
+                color: white;
+                background-color:black;
+                cursor: pointer;
+            }
+            select {
+                background-color: dimgray;
+                border-radius: 5px;
+                width: 60px;
+                height: 20px;
+            }
+            .show-text {
+                padding: 10px;
+                font-size: 20px;
+                color: #ffffff;
+                line-height: 33px;
+            }
+            .wapper {
+                font-weight: 600;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="wapper">
+            <div class="title">
+            <h1>像素扫雷</h1>
+            </div>
+            <div class="option">
+                <div class="select">
+                    <label>请选择难度等级:</label>
+                    <select id="difficulty-select" id="pet-select">
+                        <option value="简单">简单</option>
+                        <option value="中等">中等</option>
+                        <option value="难">难</option>
+                    </select>
+                </div>
+                
+            </div>
+            <canvas id="id-canvas" width="400" height="400"></canvas>
+            <div class="again">
+                <button class="again-button" id="id-button">再来一局</button>
+                <div class="show-text">快来一起扫雷吧!</div> 
+            </div>
+            <div class="fake"></div>
+            <script src="./a-42f0bfed92.js"></script> 
+    </div></body>
+</html>

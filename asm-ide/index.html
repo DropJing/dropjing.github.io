@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Axe VM Debugger</title>
+    
+    
+    <link rel="stylesheet" href="./lib/codemirror.css">
+    
+    
+
+    
+    <script src="./lib/codemirror-eda30f3f44.js"></script>
+     
+    <script src="./lib/mode/asm-38bd1beb30.js"></script>
+    <style>
+        .wapper {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+        .editor-item {
+            margin: 10px;
+        }
+
+        table {
+            display: table;
+            border-collapse: separate;
+            box-sizing: border-box;
+            text-indent: initial;
+            border-spacing: 2px;
+            border-color: grey;
+            /* border: 1px solid white; */
+        }
+        th, td {
+            border: 1px solid white;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            display: table-cell;
+            vertical-align: inherit;
+            font-weight: bold;
+            text-align: -internal-center;
+        }
+        body {
+            background-color: black;
+            background-image: radial-gradient( rgba(0, 57, 150, 0.945), black 120% );
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            color: white;
+            font: 1.3rem Menlo, Consolas, monospace, sans-serif;
+            text-shadow: 0 0 5px #c8c8c8;
+        }
+        .memory-table {
+            /* height: 200px;
+            overflow-y: scroll; */
+            height: 500px;
+            overflow-y: scroll;
+
+        }
+        .btn {
+            padding: 10px;
+            font: 1rem Menlo, Consolas, monospace, sans-serif;
+            color: white;
+            background: #00aa85;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+        .vm-btns {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .disabled {
+            opacity: 0.5;
+        }
+        .breakpoints {width: .8em;}
+        .breakpoint {color: #822;}
+        .CodeMirrow {border: 1px solid #aaa;}
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <body>
+        <div class="title">
+            <h1>ZhuoZhuo VM Debugger</h1>
+        </div>
+        
+        <div class="wapper">
+            
+            <div class="editor-item">
+                <h2>Editor</h2>
+                <textarea id="id-textarea-hvbm"></textarea>
+            </div>
+            
+
+
+            <div>
+                <h2>Registers</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Register</th>
+                            <th>Value</th>
+                          </tr>
+                    </thead>
+
+                    <tbody id="register-list">
+                    </tbody>
+                  </table>
+                  <div class="vm-btns">
+                    
+                    <button id="btn-compile" class="btn">编译</button>
+                    <button id="btn-run" class="btn disabled">运行</button>
+                    <button id="btn-run-step" class="btn disabled">单步执行</button>
+                    <button id="btn-run-point" class="btn disabled">执行到断点</button>
+
+                  </div>
+            </div>
+
+            <div>
+                <h2>Stack Memory</h2>
+
+                <div class="memory-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Address</th>
+                            <th>Value</th>
+                          </tr>
+                    </thead>
+
+                    <tbody id="memory-list">
+                    </tbody>
+                  </table>
+                  </div>
+            </div>
+     
+        </div>
+        
+    </body>
+
+</head>
+<body>
+
+
+
+<script src="./utils-e02d5942db.js"></script>
+
+
+<script src="./x16asm-149b2455de.js"></script>
+<script src="./x16vm-9acbf65380.js"></script>
+
+
+<script src="./index-b4f41d3c2d.js"></script>
+
+</body></html>
