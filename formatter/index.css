@@ -1,0 +1,150 @@
+.body-wapper {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-family: Menlo, monospace;
+    font-size: 16px;
+    padding: 0px 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+
+.config-box {
+    flex-shrink: 0;
+    overflow: auto;
+    width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #b6b6b6;
+    /* background: #3c3f41; */
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);    
+    border-radius: 10px;
+    max-height: 85vh; /* 设置容器的最大高度 */
+    overflow: auto; /* 添加滚动条 */
+}
+
+.show {
+    display: block !important;
+}
+
+
+.hidden {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(44 32 28 / 90%);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.code-box {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    /* background: #f2f2f2; */
+    display: flex;
+    
+}
+
+
+.gua-selector, .gua-input {
+    display: flex;
+    justify-content: space-between;
+    /* width: 100px; */
+}
+
+.gua-selector, .gua-input {
+   margin: 8px 0;
+}
+
+select {
+    width: 100px;
+    border-radius: 5px;
+}
+
+
+
+.hide {
+    display: none !important;
+}
+
+
+.arrow {
+    left: -14px;
+    position: absolute;
+    margin-right: 8px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+}
+
+
+.arrow-down {
+    transform: rotate(135deg);
+}
+
+
+.gua-wrap, .checkbox > label {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.gua-wrap {
+    margin: 8px 0;
+}
+
+
+.dropdown-label {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 20px;
+}
+
+
+.checkbox {
+    margin: 8px 0;
+    display: flex;
+    align-content: center;
+}
+
+.CodeMirror-wrap {
+    width: 40%;
+    height: 85vh;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.head-wapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+.dropdow-wrap {
+    margin-top: 10px;
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: defaultFont, Consolas, monospace;
+}
+
